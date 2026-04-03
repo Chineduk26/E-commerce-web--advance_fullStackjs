@@ -1,7 +1,7 @@
 const productService=require('./product.service')
 
 exports.createProduct= async(req ,res)=>{
-    const product= await productService.createProduct(req.body);
+    const product= await productService.createProduct(req.body, req.file);
     res.status(200).json(product)
 }
 exports.productlist= async(req ,res)=>{
